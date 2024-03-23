@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  min-width: 360px;
+  font-family: $oswald-family, sans-serif;
+  background-color: $mine-shaft-25;
+  color: $white;
+  font-weight: 500;
+  line-height: 1.7;
+  height: 100%;
+}
+
+.home {
+  &-header {
+    position: relative;
+  }
+}
+.top {
+  &-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: $block-size;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid $border;
+  }
+}
+.logo {
+}
+.top-line {
+  &__decoration {
+  }
+  &__contacts {
+  }
+}
+.btn {
+  &-menu {
+  }
+}

@@ -2,13 +2,6 @@
 @import "variables.scss";
 @import "reset.scss";
 @import "fonts.scss";
+@import "home-header.scss";
 
-body {
-  margin: 0;
-  min-width: 360px;
-  font-family: $oswald-family, sans-serif;
-  background-color: $mine-shaft-25;
-  color: $white;
-  font-weight: 500;
-  line-height: 1.7;
-}
+
