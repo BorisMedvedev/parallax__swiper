@@ -1,27 +1,136 @@
 <!doctype html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Parallax Swiper</title>
-    <script type="module" src="./src/js/main.js"></script>
-  </head>
-  <body>
 
-    <div class="home-header">
- 
-      <div class="top-line">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parallax Swiper</title>
+  <script type="module" src="./src/js/main.js"></script>
+</head>
 
-        <a class="logo" href="#">1111111</a>
+<body>
 
-        <div class="top-line__decoration">2222222</div>
-        <div class="top-line__contacts">3333333</div>
-        <div class="top-line__decoration">44444444</div>
-        <div class="btn-menu-box">55555555</div>
+  <div class="home-header">
+
+    <div class="top-line">
+
+      <a class="logo" href="#">
+        <span class="logo__image-wrapper">
+          <img class="logo__img" src="/images/logo.svg"
+            alt="логотип компании Вездеход">
+        </span>
+        <span class="logo__text">Вездеход</span>
+      </a>
+
+      <div class="top-line__decoration"></div>
+
+      <div class="top-line__contacts">
+        Телефон: <a href="tel:5556534"> 555-65-34</a>
+        <span class="top-line__separator"></span>
+        <span class="top-line__address">Адрес:
+          <span>ул. Московская, 35</span>
+        </span>
+      </div>
+
+      <div class="top-line__decoration"></div>
+
+      <div class="btn-menu-box">
+        <a class="menu-btn" href="#"></a>
+      </div>
+
+    </div>
+
+    <div class="hero">
+      <aside class="aside">
+
+        <div class="aside__decor"></div>
+
+        <div class="aside__soc">
+
+          <div class="aside__soc-items">
+            <a class="social-item" href="#">
+              <img src="/images/soc/vk-brands.svg" alt="">
+            </a>
+
+            <a class="social-item" href="#">
+              <img src="/images/soc/telegram.svg" alt="">
+            </a>
+
+            <a class="social-item" href="#">
+              <img src="/images/soc/twitter-brands.svg" alt="">
+            </a>
+            <a class="social-item" href="#">
+              <img src="/images/soc/whatsapp.svg" alt="">
+            </a>
+          </div>
+
+        </div>
+
+        <div class="aside__share-icon"></div>
+
+      </aside>
+
+      <div class="slider-container">
+
+
+        <div class="slider-parallax">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide slider-parallax__slide">
+              <img src="/images/slide-images/1.jpg" alt="">
+            </div>
+            <div class="swiper-slide slider-parallax__slide">
+              <img src="/images/slide-images/2.jpg" alt="">
+
+            </div>
+            <div class="swiper-slide slider-parallax__slide">
+              <img src="/images/slide-images/3.jpg" alt="">
+
+            </div>
+            
+            
+          </div>
+          <div class="swiper-pagination"></div>
+
+         
+
+          <div class="swiper-scrollbar"></div>
+        </div>
+
+
+        <div class="slider-footer">
+          <div class="slider-share">
+
+            <div class="slider-share__items">
+
+              <a class="social-item slider-share__item" href="#">
+                <img src="/images/soc/vk-brands.svg" alt="">
+              </a>
+
+              <a class="social-item slider-share__item" href="#">
+                <img src="/images/soc/telegram.svg" alt="">
+              </a>
+
+              <a class="social-item slider-share__item" href="#">
+                <img src="/images/soc/whatsapp.svg" alt="">
+              </a>
+            </div>
+
+          </div>
+          <div class="slider-paginatuon">222</div>
+          <div class="slider-scrollbar">333</div>
+          <div class="slider-navigation">
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
 
       </div>
 
     </div>
-   
-  </body>
+
+
+  </div>
+
+</body>
+
 </html>
