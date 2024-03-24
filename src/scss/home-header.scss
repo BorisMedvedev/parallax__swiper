@@ -215,6 +215,7 @@ body {
 }
 
 .slider-scrollbar {
+  //меняем на свои данные
   flex: 1 0 0;
 }
 
@@ -253,6 +254,17 @@ body {
   width: 75%;
   height: 100%;
   overflow: hidden;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 2;
+  }
 }
 
 .slider-parallax__slide {
@@ -260,9 +272,25 @@ body {
   top: 0;
   left: 0;
   height: 100%;
+  overflow: hidden;
+}
 
-  img {
-    object-fit: cover;
-    height: 100%;
-  }
+.slider-share__item-img {
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.slider-text {
+  position: absolute;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide.slider-text__item {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
