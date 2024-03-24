@@ -14,6 +14,7 @@ body {
   padding-top: $block-size;
   background-color: $mine-shaft-25;
 }
+
 .top-line {
   position: absolute;
   top: 0;
@@ -50,9 +51,10 @@ body {
   position: relative;
   flex: 1 0 0;
   text-align: center;
+
   &::before {
     position: absolute;
-    content: '';
+    content: "";
     width: 50px;
     height: 1px;
     background-color: $border;
@@ -104,10 +106,11 @@ body {
   width: $block-size;
   height: $block-size;
   background-color: $mine-shaft;
-  background-image: url('/images/burger.svg');
+  background-image: url("/images/burger.svg");
   background-repeat: no-repeat;
   background-position: center;
   transition: background 0.3s ease-out;
+
   &:hover {
     background-color: $chilean-fire;
   }
@@ -134,7 +137,7 @@ body {
 .aside__decor {
   flex: 1 0 0;
   width: 100%;
-  background-image: url('/images/decoration.svg');
+  background-image: url("/images/decoration.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -147,7 +150,7 @@ body {
   flex: 0 0 $block-size;
   width: $block-size;
   background-color: $chilean-fire;
-  background-image: url('/images/share.svg');
+  background-image: url("/images/share.svg");
   background-repeat: no-repeat;
   background-size: 14px;
   background-position: center;
@@ -206,12 +209,15 @@ body {
 .slider-share {
   flex: 0 1 auto;
 }
+
 .slider-paginatuon {
   flex: 0 0 140px;
 }
+
 .slider-scrollbar {
   flex: 1 0 0;
 }
+
 .slider-navigation {
   flex: 0 0 140px;
 }
@@ -228,11 +234,13 @@ body {
   background-color: $mine-shaft-30;
   border-right: 1px solid rgba(255, 255, 255, 0.2);
   position: relative;
+
   &:last-child {
     border-bottom: none;
+
     &::after {
       position: absolute;
-      content: '';
+      content: "";
       right: -1px;
       height: 100%;
       width: 3px;
