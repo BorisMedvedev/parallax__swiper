@@ -13,6 +13,7 @@
     "vite": "^5.2.4"
   },
   "dependencies": {
+    "gsap": "^3.12.5",
     "gulp": "^3.9.1",
     "normalize.css": "^8.0.1",
     "swiper": "^11.0.7"
