@@ -88,7 +88,8 @@
                   и
                   всех необходимых потребностей.
                 </p>
-                <button class="slider-text__btn btn btn-reset">
+                <button data-custom-open="modal-1"
+                  class="slider-text__btn btn btn-reset">
                   Оставить заявку
                 </button>
               </div>
@@ -103,11 +104,13 @@
                   модели сотен различных внедорожников, которые удовлетворят
                   даже самого требовательного клиента.
                 </p>
-                <button class="slider-text__btn btn btn-reset">
+                <button data-custom-open="modal-1"
+                  class="slider-text__btn btn btn-reset">
                   Оставить заявку
                 </button>
               </div>
             </div>
+
             <div class="swiper-slide slider-text__item">
               <div class="slide-text__inner">
                 <h2 class="slider-text__title">
@@ -117,12 +120,12 @@
                   индивидуально для каждого клиента или покупателя и с трепетом
                   относимся к реузльтату нашей работы.
                 </p>
-                <button class="slider-text__btn btn btn-reset">
+                <button data-custom-open="modal-1"
+                  class="slider-text__btn btn btn-reset">
                   Оставить заявку
                 </button>
               </div>
             </div>
-
 
           </div>
 
@@ -196,15 +199,60 @@
         <span class="total">05</span>
       </div>
 
+      <div class="slider-pagination-current">
+        <span class="slider-pagination-current__num">01</span><span
+          class="slider-pagination-current__dot">.</span>
+      </div>
+
       <div class="slider-gear"></div>
 
     </div>
 
   </div>
 
-
   </div>
 
+  <!-- [start] -->
+  <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+      <div class="modal__container" role="dialog" aria-modal="true"
+        aria-labelledby="modal-1-title">
+        <header class="modal__header">
+          <h2 class="modal__title" id="modal-1-title">
+            Оставить заявку
+          </h2>
+          <button class="modal__close" aria-label="Закрыть окно"
+            data-micromodal-close></button>
+        </header>
+
+        <form action="#">
+          <main class="modal__content">
+
+            <label for="name">
+              <input class="form-input modal__input" type="text" id="name"
+                name="name" placeholder="Ваше имя...">
+            </label>
+
+            <label for="phone">
+              <input class="form-input modal__input" type="text" id="name"
+                name="name" placeholder="Ваш телефон...">
+            </label>
+
+            <textarea class="form-input modal__input" name="message"
+              placeholder="Сообщение"></textarea>
+          </main>
+
+          <footer class="modal__footer">
+            <button class="slider-text__btn btn btn-reset">
+              Оставить заявку
+            </button>
+          </footer>
+        </form>
+
+      </div>
+    </div>
+  </div>
+  <!-- [end] -->
 </body>
 
 </html>

@@ -411,6 +411,7 @@ body {
 }
 
 .slider-pagination {
+  margin: 0 20px;
   flex: 0 0 140px;
   height: $block-size;
   display: flex;
@@ -477,4 +478,87 @@ body {
     font-size: 40px;
     display: inline-block;
   }
+}
+
+.slider-pagination-current {
+  position: absolute;
+  bottom: 30px;
+  right: 60px;
+  font-size: 100px;
+  font-family: $oswald-family;
+  color: #222;
+  -webkit-text-stroke: 1px #7f7f7f;
+
+  .slider-pagination-current__dot {
+    color: $chilean-fire;
+    -webkit-text-stroke: 1px transparent;
+  }
+}
+
+.modal__overlay {
+  background: rgba(0,0,0,0.8);
+ 
+}
+
+.modal {
+  position: absolute;
+  z-index: 100;
+  font-family: $raleway-family;
+}
+
+.modal__container {
+  background-color: $border;
+  box-shadow: 0 0 0 8px rgba($white, 0.1);
+  border-radius: 0;
+}
+
+.modal__title {
+  color: $white;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-family: $oswald-family;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.modal__close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  color: $white;
+  opacity: 0.4;
+  transition: opacity 0.3s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.form-input {
+  padding: 10px 25px;
+  min-width: 280px;
+  display: block;
+  background-color: $mine-shaft;
+  border: 1px solid lighten($mine-shaft, 7);
+  color: $white;
+  transition: border 0.3s;
+  outline: 0;
+
+  &:focus {
+    border: 1px solid lighten($mine-shaft, 30);
+  }
+}
+
+.modal__input {
+  margin-bottom: 10px;
+}
+
+textarea.modal__input {
+  height: 100px;
+}
+
+.modal__footer {
+  text-align: center;
 }

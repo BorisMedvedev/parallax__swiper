@@ -1,6 +1,7 @@
-import '../scss/style.scss';
+import MicroModal from 'micromodal';
+import '../scss/vender/micromodal.css';
 import '/node_modules/swiper/swiper-bundle.css';
-
+import '../scss/style.scss';
 import Swiper from 'swiper';
 import { gsap, Power2 } from 'gsap';
 import {
@@ -22,13 +23,21 @@ Swiper.use([
 
 const swiperIMG = new Swiper('.slider-parallax', {
   loop: false,
-  speed: 1500,
+  speed: 2000,
   parallax: true,
+  pagination: {
+    el: '.slider-pagination-count .total',
+    type: 'custom',
+    renderCustom: (swiper, current, total) => {
+      let totalRes = total >= 10 ? total : `0${total}`;
+      return totalRes;
+    },
+  },
 });
 
 const swiperText = new Swiper('.slider-text', {
   loop: false,
-  speed: 1500,
+  speed: 2000,
   parallax: true,
   mousewheel: {
     invert: false,
@@ -50,14 +59,51 @@ swiperText.controller.control = swiperIMG;
 
 const gear = document.querySelector('.slider-gear');
 swiperText.on('slideNextTransitionStart', () => {
-  gsap.to(gear, 2, {
+  gsap.to(gear, 1.8, {
     rotate: '+=40',
-    ease: Power2.easeOut
+    ease: Power2.easeOut,
   });
 });
 swiperText.on('slidePrevTransitionStart', () => {
-  gsap.to(gear, 2, {
+  gsap.to(gear, 1.8, {
     rotate: '-=40',
-    ease: Power2.easeOut
+    ease: Power2.easeOut,
   });
+});
+
+const currentNum = document.querySelector('.slider-pagination-count .current');
+const pageCurrent = document.querySelector('.slider-pagination-current__num');
+
+swiperText.on('slideChange', () => {
+  let index = swiperText.realIndex + 1;
+  let indexRes = index >= 10 ? index : `0${index}`;
+  gsap.to(currentNum, 0.2, {
+    force3D: true,
+    y: -10,
+    opacity: 0,
+    ease: Power2.easeOut,
+    onComplete: () => {
+      gsap.to(currentNum, 0.1, {
+        force3D: true,
+        y: 10,
+      });
+      currentNum.innerHTML = indexRes;
+      pageCurrent.innerHTML = indexRes;
+    },
+  });
+  gsap.to(currentNum, 0.2, {
+    force3D: true,
+    y: 0,
+    opacity: 1,
+    ease: Power2.easeOut,
+    delay: 0.3,
+  });
+});
+
+MicroModal.init({
+  openTrigger: 'data-custom-open',
+  disableFocus: true,
+  disableScroll:true,
+  awaitOpenAnimation: true,
+  awaitCloseAnimation: true,
 });
