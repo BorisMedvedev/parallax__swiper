@@ -1,3 +1,9 @@
+@mixin r($width) {
+  @media (max-width: #{$width}px) {
+    @content;
+   }
+}
+
 body {
   margin: 0;
   min-width: 360px;
@@ -31,6 +37,10 @@ body {
   text-transform: uppercase;
   font-family: $raleway-family;
   z-index: 10;
+
+  // @include r(1100) {
+  //   display: none;
+  // }
 }
 
 .logo {
@@ -496,8 +506,8 @@ body {
 }
 
 .modal__overlay {
-  background: rgba(0,0,0,0.8);
- 
+  background: rgba(0, 0, 0, 0.8);
+
 }
 
 .modal {
