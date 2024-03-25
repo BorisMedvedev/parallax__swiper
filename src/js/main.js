@@ -1,9 +1,9 @@
 import MicroModal from 'micromodal';
 import '../scss/vender/micromodal.css';
-import '/node_modules/swiper/swiper-bundle.css';
 import '../scss/style.scss';
 import Swiper from 'swiper';
 import { gsap, Power2 } from 'gsap';
+import '/node_modules/swiper/swiper-bundle.css';
 import {
   Navigation,
   Pagination,
