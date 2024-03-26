@@ -19,6 +19,10 @@ body {
   height: 100%;
   padding-top: $block-size;
   background-color: $mine-shaft-25;
+  overflow: hidden;
+  @include r(640) {
+    padding-top: 50px;
+  }
 }
 
 .top-line {
@@ -38,9 +42,12 @@ body {
   font-family: $raleway-family;
   z-index: 10;
 
-  // @include r(1100) {
-  //   display: none;
-  // }
+  @include r(1200) {
+    justify-content: space-between;
+  }
+  @include r(640) {
+    height: 50px;
+  }
 }
 
 .logo {
@@ -49,12 +56,23 @@ body {
   flex: 0 0 200px;
 }
 
+.logo__text {
+  @include r(640) {
+    display: none;
+  }
+}
+
 .logo__image-wrapper {
   width: $block-size;
   height: $block-size;
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @include r(640) {
+    width: 50px;
+    height: 50px;
+  }
 }
 
 .top-line__decoration {
@@ -69,6 +87,10 @@ body {
     height: 1px;
     background-color: $border;
     display: inline-block;
+  }
+
+  @include r(1200) {
+    display: none;
   }
 }
 
@@ -86,6 +108,9 @@ body {
     padding-left: 10px;
     color: $chilean-fire;
   }
+  @include r(640) {
+    display: none;
+  }
 }
 
 .top-line__separator {
@@ -94,11 +119,19 @@ body {
   background-color: $border;
   width: 1px;
   height: 30px;
+
+  @include r(980) {
+    display: none;
+  }
 }
 
 .top-line__address {
   span {
     color: $white;
+  }
+
+  @include r(980) {
+    display: none;
   }
 }
 
@@ -107,6 +140,10 @@ body {
   text-align: right;
   flex: 0 0 200px;
   height: $block-size;
+  @include r(640) {
+    height: 50px;
+  }
+  
 }
 
 .menu-btn {
@@ -123,6 +160,11 @@ body {
 
   &:hover {
     background-color: $chilean-fire;
+  }
+
+  @include r(640) {
+    width: 50px;
+    height: 50px;
   }
 }
 
@@ -142,6 +184,10 @@ body {
   width: $block-size;
   background-color: $mine-shaft-30;
   z-index: 5;
+  @include r(640) {
+    padding-top: 50px;
+    width: 50px;
+  }
 }
 
 .aside__decor {
@@ -150,10 +196,16 @@ body {
   background-image: url("/images/decoration.svg");
   background-repeat: no-repeat;
   background-position: center;
+  @include r(640) {
+    display: none;
+  }
 }
 
 .aside__soc {
   flex: 1 0 0;
+  @include r(640) {
+    margin-top: 150px;
+  }
 }
 
 .aside__share-icon {
@@ -164,6 +216,10 @@ body {
   background-repeat: no-repeat;
   background-size: 14px;
   background-position: center;
+  @include r(640) {
+    flex: 0 0 50px;
+    width: 50px;
+  }
 }
 
 .social-item {
@@ -195,6 +251,10 @@ body {
   &:hover img {
     opacity: 1;
   }
+  @include r(400) {
+    width: 35px;
+    height: 35px;
+  }
 }
 
 .slider-container {
@@ -203,6 +263,9 @@ body {
   height: 100%;
   padding-left: $block-size;
   overflow: hidden;
+  @include r(640) {
+    padding-left: 50px;
+  }
 }
 
 .slider-footer {
@@ -214,6 +277,11 @@ body {
   align-items: center;
   left: $block-size;
   z-index: 5;
+  @include r(640) {
+    height: 50px;
+    left: 50px;
+    width: calc(75% - 50px);
+  }
 }
 
 .slider-share {
@@ -233,6 +301,9 @@ body {
     border-radius: 10px;
     height: 3px;
     overflow: hidden;
+  }
+  @include r(640) {
+    display: none;
   }
 }
 
@@ -307,6 +378,10 @@ body {
       background-color: $chilean-fire;
     }
   }
+  @include r(640) {
+    width: 50px;
+    height: 50px;
+  }
 }
 
 .slider-parallax {
@@ -323,6 +398,10 @@ body {
     display: block;
     background-color: rgba(0, 0, 0, 0.45);
     z-index: 2;
+  }
+
+  @include r(768) {
+    width: 100%;
   }
 }
 
@@ -346,6 +425,10 @@ body {
   z-index: 3;
   width: 100%;
   height: calc(100% - #{$block-size});
+  @include r(640) {
+    height: calc(100% - 50px);
+
+  }
 }
 
 .swiper-slide.slider-text__item {
@@ -361,6 +444,13 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
+
+  @include r(768) {
+    padding-right: 20%;
+  }
+  @include r(320) {
+    padding-right: 28%;
+  }
 }
 
 .slider-text__title {
@@ -376,6 +466,18 @@ body {
   span {
     color: $chilean-fire;
   }
+
+  @include r(640) {
+    font-size: 50px;
+  }
+  @include r(560) {
+    font-size: 36px;
+    max-width: 400px;
+  }
+  @include r(400) {
+    font-size: 30px;
+    max-width: 280px;
+  }
 }
 
 .slider-text__descr {
@@ -385,6 +487,12 @@ body {
   font-family: $raleway-family;
   font-weight: 600;
   font-size: 13px;
+  @include r(640) {
+    max-width: 460px;
+  }
+  @include r(400) {
+    max-width: 280px;
+  }
 }
 
 .btn {
@@ -454,6 +562,10 @@ body {
     }
   }
 
+  @include r(640) {
+    display: none;
+  }
+
 }
 
 .slider-gear {
@@ -487,6 +599,9 @@ body {
     color: $chilean-fire;
     font-size: 40px;
     display: inline-block;
+  }
+  @include r(768) {
+    right: 0;
   }
 }
 
@@ -594,5 +709,9 @@ textarea.modal__input {
 
   #cursor.hidden {
     transform: scale(.001);
+  }
+
+  @include r(1024) {
+    display: none;
   }
 }
