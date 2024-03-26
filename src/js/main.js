@@ -152,7 +152,16 @@ body.addEventListener('mousemove', (e) => {
   cursor.classList.remove('hidden');
 });
 
-body.addEventListener('mouseout', (e) => {
-  cursor.classList.add('hidden');
-  body.classList.add('hidden');
+document.addEventListener('mousemove', (event) => {
+  let margin = 30;
+  if (
+    event.clientX < margin ||
+    event.clientX > window.innerWidth - margin ||
+    event.clientY < margin ||
+    event.clientY > window.innerHeight - margin
+  ) {
+    cursor.classList.add('hidden');
+  } else {
+    cursor.classList.remove('hidden');
+  }
 });
