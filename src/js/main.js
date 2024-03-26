@@ -111,7 +111,7 @@ MicroModal.init({
 // Cursor
 
 const body = document.querySelector('body'),
-  cursor = document.getElementById('cursor'),
+  cursor = document.querySelector('.cursor'),
   links = document.querySelectorAll('a');
 
 let mouseX = 0,
@@ -138,14 +138,14 @@ gsap.to({}, 0.01, {
   },
 });
 
-for (let i = 0; i < links.length; i++) {
-  links[i].addEventListener('mouseover', () => {
+links.forEach((element) => {
+  element.addEventListener('mouseover', () => {
     cursor.classList.add('active');
   });
-  links[i].addEventListener('mouseout', () => {
+  element.addEventListener('mouseout', () => {
     cursor.classList.remove('active');
   });
-}
+});
 
 body.addEventListener('mousemove', (e) => {
   mouseCoords(e);
@@ -154,5 +154,5 @@ body.addEventListener('mousemove', (e) => {
 
 body.addEventListener('mouseout', (e) => {
   cursor.classList.add('hidden');
+  body.classList.add('hidden');
 });
-

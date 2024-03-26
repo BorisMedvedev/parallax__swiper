@@ -13,11 +13,13 @@ body {
   font-weight: 500;
   line-height: 1.7;
   height: 100%;
-  overflow: hidden;
-  
+  overflow-y: hidden;
+
 }
+
 .site {
   height: 100%;
+  overflow: hidden;
 }
 
 .home-header {
@@ -25,6 +27,7 @@ body {
   padding-top: $block-size;
   background-color: $mine-shaft-25;
   overflow: hidden;
+
   @include r(640) {
     padding-top: 50px;
   }
@@ -50,6 +53,7 @@ body {
   @include r(1200) {
     justify-content: space-between;
   }
+
   @include r(640) {
     height: 50px;
   }
@@ -59,6 +63,7 @@ body {
   display: flex;
   align-items: center;
   flex: 0 0 200px;
+
   @include r(400) {
     flex: 0 0 100px;
   }
@@ -116,6 +121,7 @@ body {
     padding-left: 10px;
     color: $chilean-fire;
   }
+
   @include r(640) {
     display: none;
   }
@@ -148,10 +154,11 @@ body {
   text-align: right;
   flex: 0 0 200px;
   height: $block-size;
+
   @include r(640) {
     height: 50px;
   }
-  
+
 }
 
 .menu-btn {
@@ -192,6 +199,7 @@ body {
   width: $block-size;
   background-color: $mine-shaft-30;
   z-index: 5;
+
   @include r(640) {
     padding-top: 50px;
     width: 50px;
@@ -204,6 +212,7 @@ body {
   background-image: url("/images/decoration.svg");
   background-repeat: no-repeat;
   background-position: center;
+
   @include r(640) {
     display: none;
   }
@@ -211,6 +220,7 @@ body {
 
 .aside__soc {
   flex: 1 0 0;
+
   @include r(640) {
     margin-top: 150px;
   }
@@ -224,6 +234,7 @@ body {
   background-repeat: no-repeat;
   background-size: 14px;
   background-position: center;
+
   @include r(640) {
     flex: 0 0 50px;
     width: 50px;
@@ -259,6 +270,7 @@ body {
   &:hover img {
     opacity: 1;
   }
+
   @include r(400) {
     width: 35px;
     height: 35px;
@@ -271,6 +283,7 @@ body {
   height: 100%;
   padding-left: $block-size;
   overflow: hidden;
+
   @include r(640) {
     padding-left: 50px;
   }
@@ -285,6 +298,7 @@ body {
   align-items: center;
   left: $block-size;
   z-index: 5;
+
   @include r(640) {
     height: 50px;
     left: 50px;
@@ -310,6 +324,7 @@ body {
     height: 3px;
     overflow: hidden;
   }
+
   @include r(640) {
     display: none;
   }
@@ -386,6 +401,7 @@ body {
       background-color: $chilean-fire;
     }
   }
+
   @include r(640) {
     width: 50px;
     height: 50px;
@@ -433,6 +449,7 @@ body {
   z-index: 3;
   width: 100%;
   height: calc(100% - #{$block-size});
+
   @include r(640) {
     height: calc(100% - 50px);
 
@@ -456,6 +473,7 @@ body {
   @include r(768) {
     padding-right: 20%;
   }
+
   @include r(320) {
     padding-right: 28%;
   }
@@ -478,10 +496,12 @@ body {
   @include r(640) {
     font-size: 50px;
   }
+
   @include r(560) {
     font-size: 36px;
     max-width: 400px;
   }
+
   @include r(400) {
     font-size: 30px;
     max-width: 280px;
@@ -495,9 +515,11 @@ body {
   font-family: $raleway-family;
   font-weight: 600;
   font-size: 13px;
+
   @include r(640) {
     max-width: 460px;
   }
+
   @include r(400) {
     max-width: 280px;
   }
@@ -587,6 +609,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
   @include r(768) {
     display: none;
   }
@@ -611,6 +634,7 @@ body {
     font-size: 40px;
     display: inline-block;
   }
+
   @include r(768) {
     right: 0;
   }
@@ -699,7 +723,7 @@ textarea.modal__input {
   text-align: center;
 }
 
-#cursor {
+.cursor {
   position: absolute;
   width: 17px;
   height: 17px;
@@ -711,20 +735,23 @@ textarea.modal__input {
   margin: -8.5px 0 0 -8.5px;
   transform: scale(1);
   transition: transform .65s cubic-bezier(.75, -1.27, .3, 2.33);
-  opacity: 0.5;
+  opacity: 0.7;
+  display: block;
+  overflow: hidden;
 
   &.active {
-    transform: scale(3.4);
+    transform: scale(3);
     background-color: rgba(#fff, .1);
-    border: .1px solid $chilean-fire;
+    border: .1px solid #000;
   }
 
-  #cursor.hidden {
-    transform: scale(.001);
-    display: none;
-  }
 
   @include r(1024) {
     display: none;
   }
+}
+
+.cursor.hidden {
+  transform: scale(.0001);
+  display: none;
 }
