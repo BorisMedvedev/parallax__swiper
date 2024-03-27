@@ -2,7 +2,7 @@ import '../scss/vender/micromodal.css';
 import '../scss/style.scss';
 import '/node_modules/swiper/swiper-bundle.css';
 import Swiper from 'swiper';
-import { gsap, Power2 } from 'gsap';
+import {gsap, Power2} from 'gsap';
 import MicroModal from 'micromodal';
 import {
   Navigation,
@@ -29,7 +29,7 @@ const swiperIMG = new Swiper('.slider-parallax', {
     el: '.slider-pagination-count .total',
     type: 'custom',
     renderCustom: (swiper, current, total) => {
-      let totalRes = total >= 10 ? total : `0${total}`;
+      const totalRes = total >= 10 ? total : `0${total}`;
       return totalRes;
     },
   },
@@ -75,8 +75,8 @@ const currentNum = document.querySelector('.slider-pagination-count .current');
 const pageCurrent = document.querySelector('.slider-pagination-current__num');
 
 swiperText.on('slideChange', () => {
-  let index = swiperText.realIndex + 1;
-  let indexRes = index >= 10 ? index : `0${index}`;
+  const index = swiperText.realIndex + 1;
+  const indexRes = index >= 10 ? index : `0${index}`;
   gsap.to(currentNum, 0.2, {
     force3D: true,
     y: -10,
@@ -110,19 +110,19 @@ MicroModal.init({
 
 // Cursor
 
-const body = document.querySelector('body'),
-  cursor = document.querySelector('.cursor'),
-  links = document.querySelectorAll('a');
+const body = document.querySelector('body');
+const cursor = document.querySelector('.cursor');
+const links = document.querySelectorAll('a');
 
-let mouseX = 0,
-  mouseY = 0,
-  posX = 0,
-  posY = 0;
+let mouseX = 0;
+let mouseY = 0;
+let posX = 0;
+let posY = 0;
 
-function mouseCoords(e) {
+const mouseCoords = (e) => {
   mouseX = e.pageX;
   mouseY = e.pageY;
-}
+};
 
 gsap.to({}, 0.01, {
   repeat: -1,
@@ -153,7 +153,7 @@ body.addEventListener('mousemove', (e) => {
 });
 
 document.addEventListener('mousemove', (event) => {
-  let margin = 30;
+  const margin = 30;
   if (
     event.clientX < margin ||
     event.clientX > window.innerWidth - margin ||
